@@ -6,12 +6,12 @@ SM:
 
 <Login>:
     name: 'log in'
-    MDFloatLayout:
-        pos_hint:{'center_x':0.5, 'top':1}
+    MDBoxLayout:
+        pos_hint:{'center_x':0.5, 'top':0.95}
         Image:
             source: 'login2.png'
             pos_hint: {'center_x': 0.5,'top': 1}
-            size_hint: 0.3, 0.3
+            size_hint: 0.17, 0.17
             # transparency: 0.6
     MDBoxLayout:
         orientation: "vertical"
@@ -107,7 +107,8 @@ SM:
 
 <SignUp>:
     name: 'sign up'
-    MDFloatLayout:
+    MDBoxLayout:
+        pos_hint: {'center_x':0.5, 'top':1}
         MDIconButton:
             icon: 'arrow-left-bold'
             pos_hint: {'left': 0, 'top': 1}

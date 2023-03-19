@@ -24,9 +24,9 @@ class Login(MDScreen):
         try:
             if self.ids.usr_email.text == user['email'] and self.ids.usr_password.text == user['password'] and user['email'] != '':
                 self.parent.current = 'profile'
-                self.parent.get_screen('profile').ids.profile_usr.text = f'[b]User Name[/b]: \n{user["user_name"]}'
-                self.parent.get_screen('profile').ids.profile_email.text = f'[b]Email[/b]: \n{user["email"].split()[0]}'
-                self.parent.get_screen('profile').ids.profile_password.text = f'[b]Password[/b]: \n{user["password"]}'
+                self.parent.get_screen('profile').ids.profile_usr.text = f'User Name: \n{user["user_name"]}'
+                self.parent.get_screen('profile').ids.profile_email.text = f'Email: \n{user["email"].split()[0]}'
+                self.parent.get_screen('profile').ids.profile_password.text = f'Password: \n{user["password"]}'
 
                 Snackbar(
                     text=f'Welcome {user["user_name"]}',
