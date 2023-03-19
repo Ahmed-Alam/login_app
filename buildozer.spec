@@ -7,7 +7,7 @@ title = My Login
 package.name = loginApp
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.login
+package.domain = org.test
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -60,7 +60,7 @@ orientation = portrait
 #
 
 #
-# author = © Copyright Info
+author = Ahmed Alam© Copyright Info
 
 # change the major version of python used by the app
 osx.python_version = 3
