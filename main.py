@@ -6,7 +6,7 @@ from kivy.core.window import Window
 from kivymd.uix.snackbar import Snackbar
 import json
 
-Window.size = (340, 600)
+# Window.size = (340, 600)
 
 user = {
     'user_name':'Ahmed Alam',
