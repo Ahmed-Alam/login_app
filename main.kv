@@ -6,7 +6,7 @@ SM:
 
 <Login>:
     name: 'log in'
-    MDBoxLayout:
+    MDFloatLayout:
         pos_hint:{'center_x':0.5, 'top':0.95}
         Image:
             source: 'login2.png'
@@ -16,17 +16,15 @@ SM:
     MDBoxLayout:
         orientation: "vertical"
         size_hint: 0.95, 0.8
-        pos_hint: {'center_x': 0.5,'top': 0.95}
-        spacing: dp(10)
+        pos_hint: {'center_x': 0.5,'top': 0.9}
+        spacing: dp(5)
         MDBoxLayout:
             orientation: 'vertical'
-            size_hint: 0.95, 0.3
-            pos_hint: {'center_x': 0.5}
-            spacing: dp(10)
+            size_hint: 0.95, 0.4
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
             MDLabel:
                 text: "Log in"
-                size_hint: 1, None
-                height: dp(50)
+                size_hint: 1, 0.9
                 pos_hint: {'center_x': 0.5, 'top': 0.1}
                 halign: "center"
                 font_size: "30sp"
@@ -35,7 +33,6 @@ SM:
             orientation: 'vertical'
             size_hint: 0.95, 0.55
             pos_hint: {'center_x': 0.5}
-            spacing: dp(10)
             # Email field
             MDBoxLayout:
                 orientation: 'horizontal'
@@ -118,14 +115,13 @@ SM:
                 root.manager.transition.direction = 'right'
     MDBoxLayout:
         orientation: "vertical"
-        size_hint: 0.95, 0.87
+        size_hint: 0.95, 0.80
         pos_hint: {'center_x': 0.5,'top': 0.95}
-        spacing: dp(10)
+        spacing: dp(5)
         MDLabel:
             text: "Create an account"
             text_color: color
             size_hint: 1, 0.2
-            # pos_hint: {'center_x': 0.5,'center_y': 0.95}
             halign: "center"
             font_size: "30sp"
         # Email & password fields
@@ -133,15 +129,11 @@ SM:
             orientation: 'vertical'
             size_hint: 0.95, 0.5
             pos_hint: {'center_x': 0.5, 'center_y': 0.8}
-            spacing: dp(2)
             # Name field
             MDBoxLayout:
                 orientation: 'horizontal'
                 size_hint: 1, 0.3
                 pos_hint: {'center_x': 0.5}
-                # MDLabel:
-                    # text: 'Name'
-                    # size_hint_x: 0.25
                 MDTextField:
                     id: name
                     hint_text: 'enter your name'
@@ -156,9 +148,6 @@ SM:
                 orientation: 'horizontal'
                 size_hint: 1, 0.3
                 pos_hint: {'center_x': 0.5}
-                # MDLabel:
-                    # text: 'Email'
-                    # size_hint_x: 0.25
                 MDTextField:
                     id: email
                     hint_text: 'enter your email'
@@ -174,7 +163,6 @@ SM:
                 size_hint: 1, None
                 height: 60
                 pos_hint: {'center_x': 0.5}
-                
                 MDTextField:
                     id: password
                     hint_text: 'enter your password'
@@ -190,9 +178,6 @@ SM:
                 orientation: 'horizontal'
                 size_hint: 1, 0.3
                 pos_hint: {'center_x': 0.5}
-                # MDLabel:
-                    # text: 'Confirm Password'
-                    # size_hint_x: 0.25
                 MDTextField:
                     id: password_confirm
                     hint_text: 'Confirm your password'
@@ -247,7 +232,6 @@ SM:
         size_hint: 1, 0.4
         pos_hint: {'top': 0.95}
         spacing: dp(30)
-        padding: dp(10)
         MDLabel:
             text: "Your Profile"
             pos_hint: {'center_x':0.5, 'top':0.8}

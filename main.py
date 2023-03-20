@@ -23,10 +23,10 @@ class Login(MDScreen):
     def log_in(self):
         try:
             if self.ids.usr_email.text == user['email'] and self.ids.usr_password.text == user['password'] and user['email'] != '':
-                self.parent.current = 'profile'
                 self.parent.get_screen('profile').ids.profile_usr.text = f'User Name: \n{user["user_name"]}'
                 self.parent.get_screen('profile').ids.profile_email.text = f'Email: \n{user["email"].split()[0]}'
                 self.parent.get_screen('profile').ids.profile_password.text = f'Password: \n{user["password"]}'
+                self.parent.current = 'profile'
 
                 Snackbar(
                     text=f'Welcome {user["user_name"]}',
@@ -39,7 +39,7 @@ class Login(MDScreen):
 
 class SignUp(MDScreen):
     def sign_up(self):
-        print(self.ids.name.text)
+        # print(self.ids.name.text)
         try:
             user['user_name'] = self.ids.name.text
             user['email'] = self.ids.email.text
@@ -54,8 +54,7 @@ class SignUp(MDScreen):
                 Snackbar(text='Please enter user name/email')
 
 class Profile(MDScreen):
-    def profile_message(self):
-        self.ids.message.text = f"profile {user['user_name']}"
+    pass
 
 class MainApp(MDApp):
     def build(self):
