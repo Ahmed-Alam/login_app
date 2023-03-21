@@ -28,13 +28,13 @@ class Login(MDScreen):
                 self.parent.get_screen('profile').ids.profile_password.text = f'Password: \n{user["password"]}'
                 self.parent.current = 'profile'
 
-                Snackbar(
+                # Snackbar(
                     text=f'Welcome {user["user_name"]}',
                     pos_hint= {'center_x': 0.5,'y': 0},
                     duration= 1).open()
                 
         except:
-            Snackbar(text='Enter your email and password').open()
+            # Snackbar(text='Enter your email and password').open()
             return False
 
 class SignUp(MDScreen):
@@ -48,10 +48,11 @@ class SignUp(MDScreen):
                 self.manager.current = 'log in'
                 self.manager.transition.direction = 'left'
             else:
-                Snackbar(text='Password doesn\'t match').open()
+                # Snackbar(text='Password doesn\'t match').open()
         except:
             if self.ids.name.text == '' or self.ids.email.text == '':
-                Snackbar(text='Please enter user name/email')
+                # Snackbar(text='Please enter user name/email')
+                return False
 
 class Profile(MDScreen):
     pass
