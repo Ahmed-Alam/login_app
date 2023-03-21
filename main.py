@@ -48,6 +48,7 @@ class SignUp(MDScreen):
                 self.manager.current = 'log in'
                 self.manager.transition.direction = 'left'
             else:
+                return True
                 # Snackbar(text='Password doesn\'t match').open()
         except:
             if self.ids.name.text == '' or self.ids.email.text == '':
