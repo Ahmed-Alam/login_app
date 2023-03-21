@@ -28,10 +28,7 @@ class Login(MDScreen):
                 self.parent.get_screen('profile').ids.profile_password.text = f'Password: \n{user["password"]}'
                 self.parent.current = 'profile'
 
-                # Snackbar(
-                    text=f'Welcome {user["user_name"]}',
-                    pos_hint= {'center_x': 0.5,'y': 0},
-                    duration= 1).open()
+                # Snackbar(text=f'Welcome {user["user_name"]}',pos_hint= {'center_x': 0.5,'y': 0},duration= 1).open()
                 
         except:
             # Snackbar(text='Enter your email and password').open()
