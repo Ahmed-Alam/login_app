@@ -15,16 +15,16 @@ SM:
     MDBoxLayout:
         orientation: "vertical"
         size_hint: 0.95, 0.8
-        pos_hint: {'center_x': 0.5,'top': 0.9}
-        spacing: dp(5)
+        pos_hint: {'center_x': 0.5,'center_y':0.5}
+        spacing: dp(20)
         MDBoxLayout:
             orientation: 'vertical'
             size_hint: 0.95, 0.4
-            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
             MDLabel:
                 text: "Log in"
                 size_hint: 1, 0.9
-                pos_hint: {'center_x': 0.5, 'top': 0.1}
+                pos_hint: {'center_x': 0.5, 'top': 0.9}
                 halign: "center"
                 font_size: "30sp"
         # Email & password fields
@@ -37,15 +37,12 @@ SM:
                 orientation: 'horizontal'
                 size_hint: 1, 0.3
                 pos_hint: {'center_x': 0.5}
-                # MDLabel:
-                #     text: 'Email'
-                #     size_hint_x: 0.25
                 MDTextField:
                     id: usr_email
                     hint_text: 'enter your email'
                     mode: 'fill'
-                    size_hint_x: 0.75
-                    font_size: 16
+                    size_hint_x: 1
+                    font_size: dp(16)
                     pos_hint: {'center_y': 0.5}
                     multiline: False
                     write_tab: False
@@ -54,16 +51,13 @@ SM:
                 orientation: 'horizontal'
                 size_hint: 1, 0.3
                 pos_hint: {'center_x': 0.5}
-                # MDLabel:
-                #     text: 'Password'
-                #     size_hint_x: 0.25
                 MDTextField:
                     id: usr_password
                     hint_text: 'enter your password'
                     mode: 'fill'
                     password: True
-                    size_hint_x: 0.75
-                    font_size: 16
+                    size_hint_x: 1
+                    font_size: dp(16)
                     pos_hint: {'center_y': 0.5}
                     multiline: False
                     write_tab: False
